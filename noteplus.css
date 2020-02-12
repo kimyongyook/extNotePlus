@@ -1,0 +1,76 @@
+body
+{
+	min-height:70px;
+	width:200px;
+}
+
+div.toggleWrap > span
+{
+	color:#fff;
+	font-size:15px;
+	font-weight:600;
+	line-height:2;
+}
+
+div.toggleWrap
+{
+	background:#1F3766;
+	margin:0 auto;
+	padding:0 10px;
+	position:relative;
+	width:90%;
+}
+
+input
+{
+	display:none;
+}
+
+input:active + div label > span,input:checked + div label > span
+{
+	left:18px;
+}
+
+input:active + div label,input:checked + div label
+{
+	border:10px solid #abe2fb;
+	box-shadow:0 0 5px #abe2fb;
+}
+
+label > span
+{
+	background:#fff;
+	border-radius:50%;
+	box-shadow:0 0 3px 0 rgba(0,0,0,0.25), 0 3px 3px 0 rgba(0,0,0,0.15);
+	box-sizing:border-box;
+	display:block;
+	height:14px;
+	left:3px;
+	position:absolute;
+	top:3px;
+	transition:all .3s cubic-bezier(0.275,-0.45,0.725,1.45);
+	width:14px;
+}
+
+label
+{
+	background:#fff;
+	border:1px solid #e5e5e5;
+	border-radius:36px;
+	box-sizing:border-box;
+	display:block;
+	height:20px;
+	transition:all .3s ease;
+	width:36px;
+}
+
+.toggleWrap > div
+{
+	bottom:0;
+	height:20px;
+	margin-top:5px;
+	position:absolute;
+	right:10px;
+	top:0;
+	width:34px;
+}

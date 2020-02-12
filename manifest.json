@@ -1,0 +1,37 @@
+{
+    "name": "confluence-noteplus",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "컨플루언스 텍스트 편집기 기능 확장",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://confluence.skbroadband.com/pages/resumedraft.action?*"
+                ,"https://confluence.skbroadband.com/pages/editpage.action?*"
+            ],
+            "css": [
+            ],
+            "js": [
+                "inject.js"
+                ,"jquery.min.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "conf_icon.png",
+        "default_title": "Confluence-Note++",
+        "default_popup" : "index.html"
+    },
+    "permissions": [
+        "storage",
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}
